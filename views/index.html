@@ -1,34 +1,67 @@
 <!DOCTYPE html>
 
 <html>
-   <head>
-      <title>File Metadata</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="/public/style.css" rel="stylesheet" type="text/css">
-   </head>
+  <head>
+    <title>Implei | File Metadata</title>
+    <link
+      rel="shortcut icon"
+      href="https://avatars3.githubusercontent.com/u/61193321?s=460&u=7389af39e9b0236cb9ee8cdba6508afa90dcb9ff&v=4"
+      type="image/x-icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link href="/public/style.css" rel="stylesheet" type="text/css" />
 
-   <body>
-      <div class="container">
-        <h2>API Project: File Metadata Microservice</h2>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
 
-        <h3>Usage:</h3>
-        <p>
-          Please Upload a File ...
-        </p>
-        <div class="view">
-          <h4 id="output"></h4>
-          <form enctype="multipart/form-data" method="POST" action="/api/fileanalyse">
-            <input id="inputfield" type="file" name="upfile">
-            <input id="button" type="submit" value="Upload">
-          </form>
-        </div>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>
+        File Uploader
+        <img
+          src="https://image.flaticon.com/icons/svg/892/892311.svg"
+          width="50"
+          height="50"
+          alt="upload"
+        />
+      </h1>
+      <div class="view">
+        <form
+          enctype="multipart/form-data"
+          method="POST"
+          action="/api/fileanalyse"
+        >
+          <div class="form-group">
+            <input
+              id="inputfield"
+              type="file"
+              name="upfile"
+              class="form-control"
+            />
+            <br />
+            <button id="button" type="submit" class="btn btn-primary">
+              Upload
+            </button>
+          </div>
+        </form>
       </div>
-      <div class="footer">
-        <p>
-          by 
-          <a href="http://www.freecodecamp.com">freeCodeCamp</a>
-        </p>
-      </div>
-   </body>
+    </div>
+  </body>
 </html>

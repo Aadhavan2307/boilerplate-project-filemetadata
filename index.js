@@ -3,7 +3,9 @@ var cors = require('cors');
 require('dotenv').config()
 var bodyParser = require('body-parser');
 var multer = require('multer');
-var upload = multer({ dest : "/uploads"})
+
+var storage = multer.memoryStorage();
+var upload = multer({ storage: storage });
 
 var app = express();
 
@@ -21,6 +23,7 @@ app.post("/api/fileanalyse", upload.single('upfile'), function(req, res) {
   let type = req.file.mimetype;
   let size = req.file.size;
   res.json({"name": name, "type": type, "size": size});
+
 })
 
 app.get("/api/fileanalyse", function(req, res) {
