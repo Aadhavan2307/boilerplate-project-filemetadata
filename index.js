@@ -26,9 +26,11 @@ app.post("/api/fileanalyse", upload.single('upfile'), function(req, res) {
 
 })
 
-app.get("/api/fileanalyse", function(req, res) {
-  console.log(req.body + " GET");
-})
+// 404-NOT FOUND Middleware
+app.use(function(req, res, next){
+  res.status(404);
+  res.type('txt').send('Not found');
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, function () {
