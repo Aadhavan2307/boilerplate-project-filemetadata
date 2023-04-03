@@ -30,7 +30,7 @@ app.post("/api/fileanalyse", upload.single('upfile'), function(req, res) {
 app.use(function(req, res, next){
   res.status(404);
   res.type('txt').send('Not found');
-});
+}); 
 
 const port = process.env.PORT || 3000;
 app.listen(port, function () {
